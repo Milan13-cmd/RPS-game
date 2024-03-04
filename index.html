@@ -1,94 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RPS GAME</title>
     <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
-    rel="stylesheet"
-/>
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
     <style>
-        body{
-            font-family: Arial, sans-serif;
-            font-weight: bold;
-            margin: 0;
-            display: flex;
-            align-items: center;
-            flex-direction: column;
+      body {
+        font-family: Arial, sans-serif;
+        font-weight: bold;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+      h1 {
+        font-size: 5rem;
+        color: lightslategray;
+      }
+      #choices {
+        margin-bottom: 30px;
+      }
+      #choices button {
+        font-size: 8rem;
+        max-width: 180px;
+        margin: 0 10px;
+        border-radius: 50%;
+        cursor: pointer;
+        background-color: rgba(143, 197, 121, 0.852);
+        transition: background 0.3s ease;
+      }
+      #choices button:hover {
+        background-color: rgb(41, 189, 31);
+      }
+      #playerDisplay,
+      #computerDisplay {
+        font-size: 3rem;
+      }
+      #resultDisplay {
+        font-size: 3rem;
+        margin: 30px 0;
+      }
+      .scoreDisplay {
+        font-size: 3rem;
+      }
+      .greenText,
+      #playerScoreDisplay {
+        color: rgb(32, 235, 32);
+      }
+      .redText,
+      #computerScoreDisplay {
+        color: rgb(208, 57, 57);
+      }
+      #link {
+        margin-top: 30px;
+        width: 100%;
+        text-align: center;
+      }
+      #link a {
+        text-decoration: none;
+      }
+      #link a i {
+        font-size: 4rem;
+        color: rgb(81, 78, 78);
+      }
+      #link a i:active{
+        color: black;
+      }
+      @media only screen and (max-width: 768px) {
+        h1 {
+          font-size: 2rem;
         }
-        h1{
-            font-size: 3.5rem;
-            color: lightslategray;
+        #choices button {
+          font-size: 3rem;
+          margin: 0 6px;
         }
-        #choices{
-            margin-bottom: 30px;
+
+        #playerDisplay,
+        #computerDisplay {
+          font-size: 1.5rem;
         }
-        #choices button{
-            font-size: 7.5rem;
-            min-width: 160px;
-            margin: 0 10px;
-            border-radius: 50%;
-            cursor: pointer;
-            background-color: rgba(143, 197, 121, 0.852);
-            transition: background  0.3s ease;
+        #resultDisplay {
+          font-size: 1.2rem;
+          margin: 30px 0;
         }
-        #choices button:hover{
-           background-color: rgb(41, 189, 31);
+        .scoreDisplay {
+          font-size: 1.5rem;
         }
-        #playerDisplay, #computerDisplay{
-            font-size: 2.5rem;
-        }
-        #resultDisplay{
-            font-size: 5rem;
-            margin: 30px 0;
-        }
-        .scoreDisplay{
-            font-size: 2.5rem;
-        }
-        .greenText, #playerScoreDisplay{
-            color: rgb(32, 235, 32);
-        }
-        .redText, #computerScoreDisplay{
-            color: rgb(208, 57, 57);
-        }
-        #link{
-            margin-top: 30px;
-            width: 100%;
-            text-align: center;
-        }
-        #link a{
-            text-decoration: none;
-        }
-        #link a i{
-            font-size: 2rem;
-            color: black;
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Rock- Paper - Scissors</h1>
 
     <div id="choices">
-       <button onclick="playGame('rock')">👊</button>
-       <button onclick="playGame('paper')">✋</button> 
-       <button onclick="playGame('scissors')">🤞</button>     
+      <button onclick="playGame('rock')">👊</button>
+      <button onclick="playGame('paper')">✋</button>
+      <button onclick="playGame('scissors')">🤞</button>
     </div>
 
     <div id="playerDisplay">Player:</div>
     <div id="computerDisplay">Computer:</div>
     <div id="resultDisplay"></div>
-         
-    <div class="scoreDisplay">Player Score:
-        <span id="playerScoreDisplay">0</span>
+
+    <div class="scoreDisplay">
+      Player Score:
+      <span id="playerScoreDisplay">0</span>
     </div>
 
-    <div class="scoreDisplay">Computer Score:
-        <span id="computerScoreDisplay">0</span>
+    <div class="scoreDisplay">
+      Computer Score:
+      <span id="computerScoreDisplay">0</span>
     </div>
     <div id="link">
-        <a href="https://github.com/Milan13-cmd/RPS-game"><i class="ri-github-fill"></i></a>
+      <a href="https://github.com/Milan13-cmd/RPS-game"
+        ><i class="ri-github-fill"></i
+      ></a>
     </div>
     <script src="index.js"></script>
-</body>
+  </body>
 </html>
