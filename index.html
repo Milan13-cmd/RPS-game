@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>RPS GAME</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
     <style>
         body{
             font-family: Arial, sans-serif;
@@ -48,6 +52,18 @@
         .redText, #computerScoreDisplay{
             color: rgb(208, 57, 57);
         }
+        #link{
+            margin-top: 30px;
+            width: 100%;
+            text-align: center;
+        }
+        #link a{
+            text-decoration: none;
+        }
+        #link a i{
+            font-size: 2rem;
+            color: black;
+        }
     </style>
 </head>
 <body>
@@ -69,6 +85,9 @@
 
     <div class="scoreDisplay">Computer Score:
         <span id="computerScoreDisplay">0</span>
+    </div>
+    <div id="link">
+        <a href="https://github.com/Milan13-cmd/RPS-game"><i class="ri-github-fill"></i></a>
     </div>
     <script src="index.js"></script>
 </body>
